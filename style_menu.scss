@@ -1,0 +1,312 @@
+	.nav_header
+	{
+		display: flex;
+		align-items: center;
+
+		width: 100%;
+
+		margin-top: 20px;
+
+		ul
+		{
+			display: flex;
+			flex-wrap: wrap;
+
+			margin-top: 20px;
+
+			li
+			{
+
+				position: relative;
+
+				&:first-child
+				{
+					a
+					{
+						width: 80px;
+					}
+				}
+
+				&.active
+				{
+					position: relative;
+
+					a
+					{
+						background-color: $blue;
+					}
+
+					ul
+					{
+						position: absolute;
+						top: 38px;
+
+						display: block;
+
+						border-radius: 10px;
+
+						z-index: 10;
+
+						background-color: $blue;
+						border-top: 6px solid;
+						border-color: #fff6fa;
+
+						li
+						{
+							display: block;
+
+							padding: 0 10px;
+							margin: 0;
+
+							a
+							{
+								width: 100%;
+								
+								border-radius: 0;
+								border-bottom: 1px solid $white;
+								background-color: transparent;
+
+								margin: 0;
+								padding: 0;
+							}
+
+							&:first-child
+							{
+								border-radius: 6px 6px 0 0;
+							}
+
+							&:last-child
+							{
+								border-radius: 0 0 10px 10px;
+
+								a
+								{
+									border-bottom: none;
+								}
+							}
+
+							&:hover
+							{
+								background-color: $pinkLight;
+							}
+						}
+
+						@media (max-width: 1164px)
+						{
+							top: 23px;
+						}
+					}
+
+				}
+
+				&.current_menu
+				{
+					position: relative;
+					&:before
+					{
+						content: '';
+
+						position: absolute;
+						top: -28px;
+						
+						width: 100%;
+						height: 49px;
+
+						background-image: url('../imgs/butterfly.png');
+						background-repeat: no-repeat;
+						background-position: 44% 50%;
+					}
+				}
+
+				a
+				{
+					display: flex;
+					align-items: center;
+					justify-content: center;
+
+					width: 124px;
+					height: 58px;
+
+					font-family: $rockwell;
+					font-size: $fontSizeSmall + 1px;
+					color: $white;
+					text-align: center;
+					line-height: 109%;
+
+					background-color: $pink;
+					border-radius: 10px;
+				
+					margin: 0 5px;
+					padding: 0 5px;
+				}
+
+				ul
+				{
+					display: none;
+
+					// &.show_list_menu
+					// {
+					// 	position: absolute;
+					// 	top: 38px;
+
+					// 	display: block;
+
+					// 	border-radius: 10px;
+
+					// 	z-index: 10;
+
+					// 	background-color: $blue;
+					// 	border-top: 6px solid;
+					// 	border-color: #fff6fa;
+
+					// 	li
+					// 	{
+					// 		display: block;
+
+					// 		padding: 0 10px;
+
+					// 		a
+					// 		{
+					// 			width: 100%;
+								
+					// 			border-radius: 0;
+					// 			border-bottom: 1px solid $white;
+					// 			background-color: transparent;
+
+					// 			margin: 0;
+					// 			padding: 0;
+					// 		}
+
+					// 		&:last-child
+					// 		{
+					// 			a
+					// 			{
+					// 				border-bottom: none;
+					// 			}
+					// 		}
+					// 	}
+					// }
+				}
+
+				@media (max-width: 1164px)
+				{
+					margin-bottom: 10px ;
+				}
+			}
+
+			@media (max-width: 1164px)
+			{
+				justify-content: center;
+				margin-top: 35px;
+			}
+
+			@media (max-width: 699px)
+			{
+				display: none;
+			}
+		}
+	}
+
+	.mobile_menu
+	{
+		justify-content: space-between;
+
+		position: relative;
+
+		ul
+		{
+			&.active_mobile_menu
+			{
+				display: flex;
+
+				max-width: 300px;
+				width: 100%;
+
+				position: absolute;
+				top: 48px + 35px;
+
+				margin: 0;
+				
+				z-index: 1;
+				li
+				{
+					width: 100%;
+
+					margin: 0;
+
+					a
+					{
+						width: 100%;
+
+						border-bottom: 1px solid $pinkLight;
+
+						margin: 0;
+
+						&:hover
+						{
+							background-color: $blue;
+						}
+					}
+
+					&:last-child
+					{
+						a
+						{
+							border-bottom: none;
+						}
+					}
+
+					&.current_menu
+					{
+						&:before
+						{
+							content: initial;
+
+							background-image: none;
+						}
+					}
+
+
+				}
+
+				.mobile_submenu
+				{
+					margin: 0;
+
+					li
+					{
+						a
+						{
+							background-color: $pinkLight;
+							border-bottom: 1px solid $pink;	
+
+							&:hover
+							{
+								background-color: $blue;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.btn_mobile_menu
+	{
+		p
+		{
+			color: $white;
+
+			border-radius: 10px;
+			background: $pink;	
+			padding: 10px;
+			box-shadow: 1px 1px 2px $pinkLight;
+
+			cursor: pointer;
+
+			&:active
+			{
+				box-shadow: none;
+			}
+		}
+	}
