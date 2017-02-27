@@ -2,8 +2,10 @@
 {
 	position: relative;
 
-	figure // для блоков слайдера устанавливаем 'position: absolute; top: 0;'
+	figure // для блоков слайдера устанавливаем 'display: none; position: absolute; top: 0;'
 	{
+		display: none;
+		
 		position: absolute;
 		top: 0;
 
@@ -17,9 +19,10 @@
 			
 		}
 
-		// для первого блока слайдера устанавливаем 'position: static'
+		// для первого блока слайдера устанавливаем 'display: block; position: static;'
 		&:nth-child(1)
 		{
+			display: block;
 			position: static;
 		}
 	}
