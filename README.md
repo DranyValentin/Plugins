@@ -1,2 +1,5 @@
 # Plugins
-My plagins
+My plagins:
+
+- Menu
+- Slide Fide
