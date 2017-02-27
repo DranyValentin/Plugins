@@ -1,0 +1,26 @@
+.slide_container
+{
+	position: relative;
+
+	figure // для блоков слайдера устанавливаем 'position: absolute; top: 0;'
+	{
+		position: absolute;
+		top: 0;
+
+		img
+		{
+			
+		}
+
+		figcaption
+		{
+			
+		}
+
+		// для первого блока слайдера устанавливаем 'position: static'
+		&:nth-child(1)
+		{
+			position: static;
+		}
+	}
+}
