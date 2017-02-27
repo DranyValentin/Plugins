@@ -1,7 +1,3 @@
-
-//Устанавливаем всем блокам который будут участвовать в слайдере стиль 'display: none'
-	$('figure').css('display', 'none').eq(0).css('display', '')
-
 //ф-ция слайдера
 	function slideFide( currentFigure )
 	{
