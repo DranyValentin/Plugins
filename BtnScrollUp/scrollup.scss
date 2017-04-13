@@ -1,0 +1,30 @@
+.btn_up
+{
+    position: static;
+    right: 20px;
+    bottom: 20px;
+    width: 60px;
+    height: 60px;
+    display: none;
+    opacity: 0;
+    
+    font-size: 24px;
+    color: $white;
+    text-align: center;
+    background-color: $greenLight;
+    border: 1px solid $greenLight;
+
+    padding-top: 18px;
+
+    cursor: pointer;
+
+
+    &:hover
+    {
+    	color: $greenLight;
+
+    	background: $white;
+    	
+    	transition: color 0.5s ease, background 0.5s ease;
+    }
+}
